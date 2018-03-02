@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+
+  box-sizing: border-box;
+}
+
+agm-map {
+  height: 300px;
+}
+
+.numero_par{
+  background: rgba(133, 201, 247, 0.906);
+  color: #09f;
+  /* width: 300px; */
+  padding: 10px;
+  margin:5px 0px;
+}
