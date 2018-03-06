@@ -1,4 +1,4 @@
-import { LugaresService } from './../services/lugares.services';
+import { LugaresService } from './../services/lugares.service';
 import { Component } from '@angular/core';
 
 @Component({

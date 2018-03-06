@@ -11,7 +11,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {DetalleComponent} from './detalle/detalle.component';
 import {LugaresComponent} from './lugares/lugares.component';
 import {ContactoComponent} from './contacto/contacto.component';
-import {LugaresService} from './services/lugares.services';
+import {LugaresService} from "./services/lugares.service";
 
 
 import { AngularFireModule } from 'angularfire2';
@@ -24,9 +24,10 @@ const appRoutes: Routes = [
   {path:'lugares', component: LugaresComponent},
   {path:'detalle/:id', component: DetalleComponent},
   {path:'contacto', component: ContactoComponent},
-  {path:'crear', component: CrearComponent}
+  {path:'crear', component: CrearComponent},
 ];
 export const firebaseConfig = {
+  // cambiar estos datos
   apiKey: "AIzaSyDbkanUbz90jdhqeQHXL2OKL28YaJF7OMo",
   authDomain: "colsquare-1519767727847.firebaseapp.com",
   databaseURL: "https://colsquare-1519767727847.firebaseio.com",

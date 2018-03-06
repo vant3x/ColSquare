@@ -12,7 +12,7 @@
       <br>
       <h2 class="text-center">Registra un nuevo lugar <!-- <span class="fas fa-map-marker"></span>--></h2>
       <br>
-      <img src="../../assets/img/mp2.png" alt="" width="200">
+      <img src="../../assets/img/mp2.png" alt="" width="180" class="img-fluid">
       <hr>
       <br>
   </div>
@@ -20,28 +20,37 @@
       <div class="form-group row">
         <label for="inputName3" class="col-sm-2 col-form-label">Nombre:</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="inputName3" placeholder="Ingresa un nombre">
+          <input type="text" class="form-control" id="inputName3" placeholder="Ingresa un nombre" [(ngModel)]="lugar.nombre">
         </div>
       </div>
 
       <div class="form-group row">
         <label for="inputDistancia3" class="col-sm-2 col-form-label">Distancia:</label>
         <div class="col-sm-10">
-          <input type="number" class="form-control" id="inputDistancia3" placeholder="0 km">
+          <input type="number" class="form-control" id="inputDistancia3" placeholder="0 km" [(ngModel)]="lugar.distancia">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputCercania3" class="col-sm-2 col-form-label">Cercanía:</label>
+        <div class="col-sm-10">
+          <input type="number" class="form-control" id="inputCercania3" placeholder="0 km" [(ngModel)]="lugar.cercania">
         </div>
       </div>
 
         <label for="">Descripción</label>
-        <textarea class="form-control"></textarea>
-
+        <textarea class="form-control" [(ngModel)]="lugar.descripcion"></textarea>
+        <br>
+        <label for="">Plan</label>
+        <select class="form-control plan  text-center"  [(ngModel)]="lugar.plan">
+          <option>Gratuito</option>
+          <option>Pagado</option>
+        </select>
 
         <!-- en linea -->
 
-
-
         <!-- fin en linea -->
         <hr/>
-        <a href="" class="btn btn-primary">Enviar</a>
+        <a  class="btn btn-primary" (click)="guardarLugar()">Enviar</a>
         <a routerLink="/lugares" class="btn btn-default">Cancelar</a>
     </div>
     <!-- <div class="col-md-4">
@@ -51,6 +60,7 @@
         <hr />
     </div> -->
   </div>
+  <br>
 </div>
 
 

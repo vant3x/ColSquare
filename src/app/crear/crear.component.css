@@ -1,5 +1,5 @@
 textarea{
-  height: 150px;
+  height: 130px;
 }
 
 h3{
@@ -11,4 +11,15 @@ h3{
 }
 .logo{
   margin: 20px auto;
+}
+
+.plan{
+  width: 200px;
+  margin: 0 auto;
+}
+.plan1{
+
+}
+label{
+  font-weight:bold;
 }

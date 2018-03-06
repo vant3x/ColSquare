@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LugaresService } from '../services/lugares.service';
 // import {ActivatedRoute} from "@angular/router";
 
 @Component({
@@ -7,5 +8,11 @@ import { Component } from '@angular/core';
     styleUrls: ['./crear.component.css']
 })
 export class CrearComponent {
+  lugar:any = {};
+  constructor(private lugaresService: LugaresService){
 
+  }
+  guardarLugar() {
+    this.lugaresService.guardarLugar(this.lugar);
+  }
 }
