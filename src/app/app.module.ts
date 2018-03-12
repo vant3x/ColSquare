@@ -12,12 +12,14 @@ import {DetalleComponent} from './detalle/detalle.component';
 import {LugaresComponent} from './lugares/lugares.component';
 import {ContactoComponent} from './contacto/contacto.component';
 import {LugaresService} from "./services/lugares.service";
-
+import { HttpClientModule } from '@angular/common/http';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import {CrearComponent} from './crear/crear.component';
+import { SweetAlertService } from 'angular-sweetalert-service';
+
 
 const appRoutes: Routes = [
   {path: '', component: LugaresComponent},
@@ -43,11 +45,13 @@ export const firebaseConfig = {
       LugaresComponent,
       ContactoComponent,
       CrearComponent
+
   ],
   imports: [
     BrowserModule,
      FormsModule,
-     AgmCoreModule.forRoot({
+     HttpClientModule,
+      AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCDB2ipW8I8UJzGIEyo8qMJDROXdo9yRzM'
     }),
     BrowserAnimationsModule,
@@ -56,7 +60,9 @@ export const firebaseConfig = {
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
-  providers: [LugaresService],
+  providers: [
+    LugaresService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
